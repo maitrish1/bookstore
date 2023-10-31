@@ -15,6 +15,7 @@ const StyledCard = styled(Card)(({ theme }) => ({
   flexDirection: 'row',
   margin: theme.spacing(2),
   height: '200px', 
+  width:'250px'
 }));
 
 const StyledCardContent = styled(CardContent)({
