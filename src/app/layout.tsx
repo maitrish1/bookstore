@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import ResponsiveDrawer from './Components/Navbar'
+import { Box } from '@mui/material'; // Import Box from MUI
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,8 +19,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ResponsiveDrawer/>
-        {children}</body>
+        <Box display="flex" flexDirection="row">
+          <ResponsiveDrawer/>
+          <Box flexGrow={1} display="flex" justifyContent="center" alignItems="center">
+            {children}
+          </Box>
+        </Box>
+      </body>
     </html>
   )
 }
